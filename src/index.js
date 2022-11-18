@@ -9,12 +9,17 @@ APP.use(express.json());
 const SERVER = http.createServer(APP);
 
 const PORT = process.env.PORT;
+const sleep = (process.env.PORT % 10) * 1000;
 
 APP.use(cors());
 
 SERVER.listen(PORT);
 
 let timer = 0;
+
+setInterval(() => {
+  timer += sleep / 1000;
+}, [sleep]);
 
 APP.get("/get-timer", (req, res) => {
   console.log(`Timer ${PORT}: ${timer}`);
