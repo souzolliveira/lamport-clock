@@ -1,0 +1,165 @@
+{
+  "info": {
+    "_postman_id": "fc7bae4d-c50f-4466-9408-c6ca1bbf67af",
+    "name": "MC714",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24508613"
+  },
+  "item": [
+    {
+      "name": "lamport-clock",
+      "item": [
+        {
+          "name": "9123",
+          "item": [
+            {
+              "name": "send-message to 9124",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9123/send-message/9124",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9123",
+                  "path": ["send-message", "9124"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "send-message to 9125",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9123/send-message/9125",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9123",
+                  "path": ["send-message", "9125"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "get-timer",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9123/get-timer",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9123",
+                  "path": ["get-timer"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "9124",
+          "item": [
+            {
+              "name": "get-timer",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9124/get-timer",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9124",
+                  "path": ["get-timer"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "send-message to 9123",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9124/send-message/9123",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9124",
+                  "path": ["send-message", "9123"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "send-message to 9125",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9124/send-message/9125",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9124",
+                  "path": ["send-message", "9125"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "9125",
+          "item": [
+            {
+              "name": "get-timer",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9125/get-timer",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9125",
+                  "path": ["get-timer"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "send-message to 9123",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9125/send-message/9123",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9125",
+                  "path": ["send-message", "9123"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "send-message to 9124",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:9125/send-message/9124",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "9125",
+                  "path": ["send-message", "9124"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
