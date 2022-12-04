@@ -30,22 +30,25 @@ APP.get("/get-timer", (req, res) => {
 APP.get("/send-message/:to", (req, res) => {
   timer += 1;
 
+  console.log(`${PORT} sends a message to ${req.params.to}`);
+  console.log(`Timer ${PORT}: ${timer}`);
+  console.log("");
   const SERVICE = axios.create({
     baseURL: `http://localhost:${req.params.to}`,
   });
-  SERVICE.get(`/message/${PORT}/${timer}`).then(() => {
-    console.log(`${PORT} sends a message to ${req.params.to}`);
-    console.log(`Timer ${PORT}: ${timer}`);
-    console.log("");
-  });
+  SERVICE.get(`/message/${PORT}/${timer}`).then(() => {});
   res.json({});
 });
 
 APP.get("/message/:from/:timer", (req, res) => {
-  if (parseInt(timer, 10) < parseInt(req.params.timer, 10))
-    timer = parseInt(req.params.timer, 10);
   console.log(`${PORT} receives a message from ${req.params.from}`);
-  console.log(`Timer ${PORT}: ${timer}`);
+  if (parseInt(timer, 10) < parseInt(req.params.timer, 10)) {
+    console.log(`Previous timer ${PORT}: ${timer}`);
+    timer = parseInt(req.params.timer, 10);
+  }
+  console.log(`Current timer ${PORT}: ${timer}`);
+  console.log("");
+  console.log("########### Message sent ###########");
   console.log("");
   res.json({});
 });
